@@ -20,19 +20,20 @@ jobs:
           latexmk_use_xelatex: true
           args: -interaction=nonstopmode
 
-      - name: Prepare files
+      - name: Prepare deployment files
         run: |
           DATE=$(date +'%Y-%m-%d')
+          mkdir -p deploy
           
-          # 复制 PDF 到根目录
-          cp main.pdf "实变函数笔记-latest.pdf"
-          cp main.pdf "实变函数笔记-${DATE}.pdf"
+          # 复制 PDF
+          cp main.pdf "deploy/实变函数笔记-latest.pdf"
+          cp main.pdf "deploy/实变函数笔记-${DATE}.pdf"
           
-          # 复制 PDF.js（保持原有结构）
-          cp -r web/pdfjs .
+          # 复制 PDF.js
+          cp -r web/pdfjs deploy/
           
-          # 创建 index.html
-          cat > index.html << 'EOF'
+          # 创建入口页面
+          cat > deploy/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
@@ -40,7 +41,9 @@ jobs:
               <meta http-equiv="refresh" content="0; url=pdfjs/web/viewer.html?file=../实变函数笔记-latest.pdf">
               <title>实变函数笔记</title>
           </head>
-          <body><p>正在加载...</p></body>
+          <body>
+              <p>正在加载...</p>
+          </body>
           </html>
           EOF
 
@@ -48,7 +51,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./      # 直接发布当前目录
+          publish_dir: ./deploy
           publish_branch: gh-pages
           keep_files: false
 
