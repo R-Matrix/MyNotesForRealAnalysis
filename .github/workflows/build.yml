@@ -20,22 +20,39 @@ jobs:
           latexmk_use_xelatex: true
           args: -interaction=nonstopmode
 
-      - name: Prepare PDF files
+      - name: Prepare files
         run: |
           DATE=$(date +'%Y-%m-%d')
+          
+          # 复制 PDF 到根目录
           cp main.pdf "实变函数笔记-latest.pdf"
           cp main.pdf "实变函数笔记-${DATE}.pdf"
+          
+          # 复制 PDF.js（保持原有结构）
+          cp -r web/pdfjs .
+          
+          # 创建 index.html
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0; url=pdfjs/web/viewer.html?file=../实变函数笔记-latest.pdf">
+              <title>实变函数笔记</title>
+          </head>
+          <body><p>正在加载...</p></body>
+          </html>
+          EOF
 
-      - name: Deploy latest PDF to gh-pages
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./      # 直接发布当前目录
           publish_branch: gh-pages
           keep_files: false
-          only: "实变函数笔记-latest.pdf"
 
-      - name: Create Release (only on tag push)
+      - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
