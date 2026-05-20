@@ -1,0 +1,292 @@
+% ==================== 数学符号缩写 ====================
+
+% 其他
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\setof}[2]{\left\{ #1 \: : \: #2 \right\}}
+
+
+% 空心体（数集、空间）
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\KK}{\mathbb{K}}  % 一般数域（R 或 C）
+\newcommand{\Pp}{\mathbb{P}}  % 概率 / 投影空间
+
+% 书法字体（范畴、函数空间、拓扑结构）
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+% 哥特体（理想、不可测集、李代数）
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\fp}{\mathfrak{p}}
+\newcommand{\fq}{\mathfrak{q}}
+\newcommand{\fm}{\mathfrak{m}}
+\newcommand{\fn}{\mathfrak{n}}
+\newcommand{\fh}{\mathfrak{h}}
+\newcommand{\fa}{\mathfrak{a}}
+\newcommand{\fb}{\mathfrak{b}}
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fR}{\mathfrak{R}}
+
+% 圆花体
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+
+
+% 粗体（向量、矩阵）
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\bone}{\mathbf{1}}
+
+% 希腊字母（常用变体）
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ph}{\varphi}
+\newcommand{\te}{\theta}
+\newcommand{\ve}{\vartheta}
+\newcommand{\kp}{\varkappa}
+\newcommand{\rh}{\varrho}
+\newcommand{\sig}{\varsigma}
+\newcommand{\ep}{\epsilon}  % 标准 epsilon
+
+% ==================== 实变函数论 ====================
+% 测度与积分
+\newcommand{\mustar}{\mu^{*}}  % 外测度
+\newcommand{\lebesgue}{\mathcal{L}}  % Lebesgue 可测集
+\newcommand{\bor}{\mathcal{B}}  % Borel 代数
+\newcommand{\meas}{\operatorname{meas}}  % 测度
+\newcommand{\esssup}{\operatorname{ess\,sup}}  % 本质上限
+\newcommand{\essinf}{\operatorname{ess\,inf}}  % 本质下限
+\newcommand{\supp}{\operatorname{supp}}  % 支集
+
+% 函数空间
+\newcommand{\lp}[1]{L^{#1}}  % L^p 空间，用法：\lp{p}
+\newcommand{\lpinf}{L^{\infty}}
+\newcommand{\lploc}[1]{L^{#1}_{\text{loc}}}  % 局部可积
+\newcommand{\lpweak}[1]{L^{#1}_{\text{weak}}}  % 弱 L^p
+\newcommand{\lpe}[1]{L^{#1}_{\text{强}}}
+\newcommand{\cspace}[1]{\mathcal{C}^{#1}}  % C^k 空间
+
+% 范数和内积
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\normp}[2]{\left\|#1\right\|_{L^{#2}}}
+\newcommand{\inn}[2]{\langle #1, #2 \rangle}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+% 特征函数
+\newcommand{\ind}[1]{\mathbf{1}_{#1}}  % 指示函数
+\newcommand{\chiE}[1]{\chi_{#1}}  % 特征函数
+
+% 几乎处处 / 几乎必然
+\newcommand{\as}{\text{ a.s. }}
+\newcommand{\aei}{\text{ a.e. } x \in}
+\newcommand{\almost}{\text{ a.e. }}
+
+% 收敛类型
+\newcommand{\conv}{\rightarrow}
+\newcommand{\convp}{\xrightarrow{p}}  % 依测度收敛
+\newcommand{\convae}{\xrightarrow{\text{a.e.}}}  % 几乎处处收敛
+\newcommand{\convweak}{\xrightharpoonup{}}  % 弱收敛
+\newcommand{\convweakstar}{\xrightharpoonup{*}}  % 弱*收敛
+\newcommand{\cnvg}{\xrightarrow{\text{强}}}
+
+% ==================== 点集拓扑学 ====================
+% 拓扑空间基础
+\newcommand{\topspace}{(X, \mathcal{T})}
+\newcommand{\closure}[1]{\overline{#1}}  % 闭包
+\newcommand{\interior}[1]{\mathrm{int}(#1)}  % 内部
+\newcommand{\boundary}[1]{\partial #1}  % 边界
+\newcommand{\frontier}[1]{\mathrm{Fr}(#1)}  % 边缘
+\newcommand{\limitpt}[1]{#1'}  % 导集
+
+% 邻域和开集
+\newcommand{\neigh}[1]{\mathcal{N}(#1)}  % 邻域系
+\newcommand{\open}[1]{\mathrm{Open}(#1)}  % 开集族
+\newcommand{\closed}[1]{\mathrm{Closed}(#1)}  % 闭集族
+
+% 分离公理
+\newcommand{\tzer}{\mathrm{T}_0}
+\newcommand{\tone}{\mathrm{T}_1}
+\newcommand{\ttwo}{\mathrm{T}_2}
+\newcommand{\tthree}{\mathrm{T}_3}
+\newcommand{\tthreep}{\mathrm{T}_{3\frac12}}
+\newcommand{\tfour}{\mathrm{T}_4}
+\newcommand{\tfive}{\mathrm{T}_5}
+\newcommand{\txi}{\mathrm{T}_{\frac12}}  % T_{1/2}
+
+% 紧致性
+\newcommand{\cpt}{\text{紧致}}
+\newcommand{\lincpt}{\text{局部紧致}}
+\newcommand{\seqcpt}{\text{序列紧致}}
+\newcommand{\countcpt}{\text{可数紧致}}
+\newcommand{\paracpt}{\text{仿紧致}}
+
+% 连通性
+\newcommand{\conn}{\text{连通}}
+\newcommand{\locconn}{\text{局部连通}}
+\newcommand{\pathconn}{\text{道路连通}}
+\newcommand{\arcconn}{\text{弧连通}}
+\newcommand{\totdisconn}{\text{完全不连通}}
+
+% 拓扑结构
+\newcommand{\subspace}{\text{子空间拓扑}}
+\newcommand{\prodspace}{\text{积拓扑}}
+\newcommand{\quotspace}{\text{商拓扑}}
+\newcommand{\metrizable}{\text{可度量化的}}
+
+% 度量空间
+\newcommand{\metricspace}{(X, d)}
+\newcommand{\ball}[2]{B_{#1}(#2)}  % 开球
+\newcommand{\clball}[2]{\overline{B}_{#1}(#2)}  % 闭球
+\newcommand{\diam}[1]{\operatorname{diam}(#1)}  % 直径
+\newcommand{\dist}[2]{\operatorname{dist}(#1, #2)}  % 距离
+\newcommand{\hausdist}{\mathrm{d}_H}  % Hausdorff 距离
+
+% ==================== 常用数学结构 ====================
+\newcommand{\power}[1]{\mathcal{P}(#1)}  % 幂集
+\newcommand{\finpower}[1]{\mathcal{P}_{\text{fin}}(#1)}  % 有限子集族
+\newcommand{\seq}[1]{(#1_n)_{n\in\N}}  % 序列
+\newcommand{\nets}[1]{(#1_\alpha)_{\alpha\in A}}  % 网
+
+% 笛卡尔积
+\newcommand{\prodinf}[1]{\prod_{i=1}^{\infty} #1}
+\newcommand{\prodf}[1]{\prod_{i=1}^{n} #1}
+
+% 直和
+\newcommand{\oplusinf}[1]{\bigoplus_{i=1}^{\infty} #1}
+\newcommand{\oplusf}[1]{\bigoplus_{i=1}^{n} #1}
+
+% ==================== 逻辑 / 集合论 ====================
+\newcommand{\Implies}{\Longrightarrow}
+\newcommand{\Iff}{\Longleftrightarrow}
+\newcommand{\st}{\text{ s.t. }}  % such that
+\newcommand{\set}[2]{\left\{ #1 \mid #2 \right\}}
+\newcommand{\card}[1]{\operatorname{card}(#1)}  % 基数
+
+% 关系符号
+\newcommand{\sub}{\subseteq}
+\newcommand{\sups}{\supseteq}
+\newcommand{\ssub}{\subsetneq}
+\newcommand{\ssups}{\supsetneq}
+\newcommand{\union}{\cup}
+\newcommand{\bigunion}{\bigcup}
+\newcommand{\inter}{\cap}
+\newcommand{\biginter}{\bigcap}
+\newcommand{\disunion}{\sqcup}
+\newcommand{\bigdisunion}{\bigsqcup}
+
+% ==================== 文本缩写 ====================
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\wrt}{\textit{w.r.t.}}
+\newcommand{\cf}{\textit{cf.}}
+\newcommand{\viz}{\textit{viz.}}
+\newcommand{\resp}{\textit{resp.}}
+\newcommand{\ad}{\textit{ad.}}
+\newcommand{\loc}{\textit{loc.}}
+\newcommand{\ibid}{\textit{ibid.}}
+
+% ==================== 微积分 / 分析 ====================
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pderivs}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\deriv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\derivs}[2]{\frac{\mathrm{d}^2#1}{\mathrm{d}#2^2}}
+\newcommand{\grad}{\nabla}
+\newcommand{\laplacian}{\Delta}
+\newcommand{\divg}{\operatorname{div}}
+\newcommand{\curl}{\operatorname{curl}}
+
+% 极限和上下极限
+\newcommand{\liminfn}{\liminf_{n\to\infty}}
+\newcommand{\limsupn}{\limsup_{n\to\infty}}
+\newcommand{\liminfx}[1]{\liminf_{#1\to\infty}}
+\newcommand{\limsupx}[1]{\limsup_{#1\to\infty}}
+
+% ==================== 线性代数 / 算子 ====================
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Img}{\operatorname{Im}}
+\newcommand{\Coker}{\operatorname{Coker}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\SO}{\operatorname{SO}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\U}{\operatorname{U}}
+\newcommand{\adj}{\operatorname{adj}}  % 伴随矩阵
+\newcommand{\sgn}{\operatorname{sgn}}  % 符号函数
+
+% ==================== 概率论 ====================
+\newcommand{\E}{\mathbb{E}}  % 期望
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Corr}{\operatorname{Corr}}
+\newcommand{\Bias}{\operatorname{Bias}}
+\newcommand{\MSE}{\operatorname{MSE}}
+\newcommand{\iid}{\stackrel{\text{i.i.d.}}{\sim}}
+\newcommand{\indep}{\perp \!\!\! \perp}  % 独立符号
+
+% 常用分布
+\newcommand{\Normal}{\mathcal{N}}
+\newcommand{\Uniform}{\mathcal{U}}
+\newcommand{\Bernoulli}{\mathrm{Bern}}
+\newcommand{\Binomial}{\mathrm{Bin}}
+\newcommand{\Poisson}{\mathrm{Pois}}
+\newcommand{\Exponential}{\mathrm{Exp}}
+\newcommand{\GammaDist}{\mathrm{Gamma}}
+\newcommand{\BetaDist}{\mathrm{Beta}}
