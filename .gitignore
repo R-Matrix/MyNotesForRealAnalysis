@@ -1,0 +1,18 @@
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+build/
+output/
+!web/pdfjs/build
+
+# 临时部署目录
+deploy/
+
+.vscode/
