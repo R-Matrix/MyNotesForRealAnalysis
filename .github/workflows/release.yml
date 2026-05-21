@@ -1,0 +1,29 @@
+name: Create Release
+
+on:
+  push:
+    tags: ['*']
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get datetime and rename PDF
+        run: |
+          export TZ='Asia/Shanghai'
+          DATETIME=$(date +'%Y-%m-%d_%H-%M-%S')
+          cp main.pdf "实变函数笔记-${DATETIME}.pdf"
+          echo "PDF_NAME=实变函数笔记-${DATETIME}.pdf" >> $GITHUB_ENV
+          echo "DATETIME=${DATETIME}" >> $GITHUB_ENV
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.PDF_NAME }}
+          tag_name: ${{ github.ref_name }}
+          name: "实变函数笔记 ${{ env.DATETIME }}"
+          body: |
+            编译时间：${{ env.DATETIME }}
